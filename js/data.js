@@ -7,6 +7,7 @@ const posts = [
     post: "images/post-vangogh.jpg",
     comment: "just took a few mushrooms lol",
     likes: 21,
+    liked: false,
   },
   {
     name: "Gustave Courbet",
@@ -16,6 +17,7 @@ const posts = [
     post: "images/post-courbet.jpg",
     comment: "i'm feelin a bit stressed tbh",
     likes: 4,
+    liked: false,
   },
   {
     name: "Joseph Ducreux",
@@ -26,5 +28,8 @@ const posts = [
     comment:
       "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
     likes: 152,
+    liked: false,
   },
 ];
+
+export default posts;
