@@ -12,18 +12,11 @@ class Post {
     return postAvatar;
   }
 
-  createPostInfoName() {
-    const postInfoName = document.createElement("p");
-    postInfoName.textContent = `${this.name}`;
-    postInfoName.classList.add("post-info-name");
-    return postInfoName;
-  }
-
-  createPostInfoLocation() {
-    const postInfoLocation = document.createElement("p");
-    postInfoLocation.textContent = `${this.location}`;
-    postInfoLocation.classList.add("post-info-location");
-    return postInfoLocation;
+  createPostUserInfo(info, className) {
+    const postUserInfo = document.createElement("p");
+    postUserInfo.textContent = `${info}`;
+    postUserInfo.classList.add(`${className}`);
+    return postUserInfo;
   }
 
   createPostImage() {
@@ -33,7 +26,7 @@ class Post {
     return postImage;
   }
 
-  createIcons() {    
+  createIcons() {
     const icons = document.createElement("div");
     const iconNames = ["heart", "comment", "dm"];
     iconNames.forEach((name) => {
@@ -103,8 +96,12 @@ class Post {
     post.appendChild(postHeader);
     postHeader.appendChild(this.createPostAvatar());
     postHeader.appendChild(postUserInfo);
-    postUserInfo.appendChild(this.createPostInfoName());
-    postUserInfo.appendChild(this.createPostInfoLocation());
+    postUserInfo.appendChild(
+      this.createPostUserInfo(this.name, "post-info-name")
+    );
+    postUserInfo.appendChild(
+      this.createPostUserInfo(this.location, "post-info-location")
+    );
     post.appendChild(mainContent);
     mainContent.appendChild(this.createPostImage());
     mainContent.appendChild(postInfo);
