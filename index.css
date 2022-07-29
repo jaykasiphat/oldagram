@@ -1,5 +1,104 @@
+/*********************
+  Base
+*********************/
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #ededed;
+  max-width: 400px;
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.main-header,
+.post {
+  background: #fff;
+}
+
+.post-username,
+.likes,
+.post-info-name {
+  font-weight: bold;
+}
+
+/*********************
+  Images
+*********************/
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  max-width: 9em;
+}
+
+.user-avatar {
+  border: 1px solid #000;
+}
+
+.user-avatar,
+.post-avatar {
+  max-width: 2.7em;
+  border-radius: 50%;
+}
+
+.icon {
+  max-width: 1.8em;
+  margin: 1em 0.8em 0 0;
+}
+
+/*********************
+  Layout
+*********************/
+
+body,
+.main-header,
+.post-header {
+  display: flex;
+}
+
+body {
+  flex-direction: column;
+}
+
+.post {
+  margin-bottom: 1em;
+}
+
+.main-header {
+  justify-content: space-between;  
+  border-bottom: 1px solid #c6c6c6;
+  padding: 0.5em;
+}
+
+.main-header,
+.post-header {
+  align-items: center;
+}
+
+.main-header,
+.post-user-info,
+.post-header,
+.post-info {
+  padding-left: 1.3em;
+  padding-right: 1.3em;
+}
+
+.post-info-name {
+  margin-bottom: 0.2em;
+}
+
+.post-info-location {
+  margin-top: 0;
 }
